@@ -1,0 +1,45 @@
+.navBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgb(174, 121, 199);
+    justify-content: space-between;
+}
+
+.navBarLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navBarLeft h1 {
+    cursor: pointer;
+}
+
+.navBarCenter {
+    display: flex;
+    flex-direction: row;
+}
+
+.navBarCenter li {
+    list-style: none;
+    cursor: pointer;
+    margin: 0 2vw 0 2vw;
+}
+
+.navBarCenter li:hover {
+    border-bottom: 1px solid;
+}
+
+.logo {
+    height: 10vh;
+    cursor: pointer;
+}
+
+.navBarRight {
+    margin-right: 2vw;
+}
+
+.cartIcon {
+    cursor: pointer;
+}
