@@ -1,0 +1,17 @@
+.cartWidget {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin-right: 2vw;
+}
+
+.cartIcon {
+    align-self: center;
+    cursor: pointer;
+}
+
+.cartNumber {
+    width: 1.3em;
+    height: 1.3em;
+    text-align: center;
+}

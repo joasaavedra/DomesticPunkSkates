@@ -1,9 +1,10 @@
-import logo from '../logo.png';
+import logo from '../logo.png'
+import { CartWidget } from './CartWidget'
 import './navBar.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+
 
 export const NavBar = () => {
+    
     return  <nav className='navBar'>
                 <div className='navBarLeft'>
                     <img className='logo' src={logo} alt="logo"/>
@@ -15,8 +16,6 @@ export const NavBar = () => {
                     <li>Quads</li>
                     <li>Brands</li>
                 </ul>
-                <div className='navBarRight'>
-                    <FontAwesomeIcon icon={faShoppingCart} size='lg' className='cartIcon'/>
-                </div>
+                <CartWidget />
             </nav>
 }
