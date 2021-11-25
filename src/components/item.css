@@ -1,0 +1,32 @@
+.card {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardImg {
+    width: 100%;
+}
+
+.cardTitle, .cardPrice {
+    text-align: center;
+}
+
+.cardButton {
+    width: 100%;
+    height: 5vh;
+    color: rgb(174, 121, 199);
+    font-size: medium;
+    font-weight: bold;
+    border: 2px solid rgb(174, 121, 199);
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+}
+
+.cardButton:hover {
+    background-color: rgb(174, 121, 199);
+    color: white;
+}
