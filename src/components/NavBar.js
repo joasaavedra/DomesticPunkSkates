@@ -1,6 +1,9 @@
 import logo from '../logo.png'
 import { CartWidget } from './CartWidget'
+import { MobileNavigation } from './MobileNavigation'
+import { Navigation } from './Navigation'
 import './navBar.css'
+
 
 
 export const NavBar = () => {
@@ -10,12 +13,8 @@ export const NavBar = () => {
                     <img className='logo' src={logo} alt="logo"/>
                     <h1>DOMESTIC PUNK SKATES</h1>
                 </div>
-                <ul className='navBarCenter'>
-                    <li>AGGRESSIVE</li>
-                    <li>ROLLERBLADING</li>
-                    <li>QUADS</li>
-                    <li>BRANDS</li>
-                </ul>
+                <MobileNavigation />
+                <Navigation />
                 <CartWidget />
             </nav>
 }

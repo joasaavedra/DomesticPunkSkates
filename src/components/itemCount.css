@@ -1,3 +1,7 @@
+.productContainer{
+    width: 15vw;
+}
+
 .product {
     display: flex;
     flex-direction: column;
@@ -6,7 +10,7 @@
 }
 
 .productImage {
-    width: 20vw;
+    width: 100%;
 }
 
 .counter {
@@ -49,4 +53,10 @@
 .addToCartBtn:hover, .quantityBtn:hover {
     background-color: rgb(174, 121, 199);
     color: white;
+}
+
+@media (max-width: 992px) {
+    .productContainer {
+        width: 40vw;
+    }
 }

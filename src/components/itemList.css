@@ -1,5 +1,12 @@
 .itemContainer {
     display: grid;
-    grid-template-columns: repeat(3, 20vw);
-    column-gap: 7vw;
+    grid-template-columns: repeat(4, 20vw);
+    column-gap: 4vw;
+    justify-items: center;
+}
+
+@media (max-width: 992px) {
+    .itemContainer {
+        grid-template-columns: repeat(2, 40vw);
+    }
 }

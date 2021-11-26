@@ -17,7 +17,7 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
     }
 
     return (
-        <div>
+        <div className='productContainer'>
             <div className='product'>
                 <img className='productImage' src='https://www.roces.com/pub/media/catalog/product/cache/c7f8b3057cd3dca920be537fa7ff27ff/1/0/101277_002.jpg' alt='Roces M12 LO'/>
                 <p>ROCES M12 LO UFS SPASSOV DOMESTIC PUNK</p>

@@ -36,3 +36,46 @@
     height: 10vh;
     cursor: pointer;
 }
+
+.mobileNavigation {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        display: none;
+    }
+
+    .mobileNavigation {
+        display: flex;
+        align-items: center;
+    }
+
+    .hamburger {
+        position: absolute;
+        right: 12vw;
+        cursor: pointer;
+    }
+
+    .navBarCenter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        right: 0px;
+        width: 100%;
+        height:fit-content ;
+        background-color: rgba(174, 121, 199, 0.945);
+        border-top: 2px solid rgb(180, 12, 12);
+    }
+
+    .navBarCenter li:last-child {
+        margin-bottom: 1vh;
+    }
+
+    .navBarCenter li {
+        width: 30%;
+        text-align: center;
+    }
+}

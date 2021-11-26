@@ -14,6 +14,13 @@ const getItems = () => {
                 img: 'https://www.roces.com/pub/media/catalog/product/cache/c7f8b3057cd3dca920be537fa7ff27ff/1/0/101277_002.jpg'
             },
             {
+                id: 3,
+                name: 'M12 LO TIDES',
+                price: '€219.99',
+                stock: 17,
+                img: 'https://www.roces.com/pub/media/catalog/product/cache/c7f8b3057cd3dca920be537fa7ff27ff/t/i/tides.jpg' 
+            },
+            {
                 id: '2',
                 name: 'FIFTH ELEMENT UFS GOTO KEMURI GRAY',
                 price: '€279.99',
@@ -21,11 +28,11 @@ const getItems = () => {
                 img: 'https://www.roces.com/pub/media/catalog/product/cache/c7f8b3057cd3dca920be537fa7ff27ff/1/0/101279_002_1.jpg'
             },
             {
-                id: 3,
-                name: 'M12 LO TIDES',
-                price: '€219.99',
-                stock: 17,
-                img: 'https://www.roces.com/pub/media/catalog/product/cache/c7f8b3057cd3dca920be537fa7ff27ff/t/i/tides.jpg' 
+                id: 4,
+                name: 'FIFTH ELEMENT JANSONS STORM',
+                price: '€279.99',
+                stock: 25,
+                img: 'https://www.roces.com/pub/media/catalog/product/cache/c7f8b3057cd3dca920be537fa7ff27ff/n/i/nils_storm_fifth.jpg'
             }
         ]
         setTimeout(() => resolve(object), 2000)
