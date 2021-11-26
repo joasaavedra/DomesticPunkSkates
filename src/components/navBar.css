@@ -1,4 +1,5 @@
 .navBar {
+    font-family: 'Oswald', sans-serif;
     display: flex;
     flex-direction: row;
     align-items: center;

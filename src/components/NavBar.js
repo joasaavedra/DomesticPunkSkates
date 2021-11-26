@@ -8,13 +8,13 @@ export const NavBar = () => {
     return  <nav className='navBar'>
                 <div className='navBarLeft'>
                     <img className='logo' src={logo} alt="logo"/>
-                    <h1>Domestic Punk Skates</h1>
+                    <h1>DOMESTIC PUNK SKATES</h1>
                 </div>
                 <ul className='navBarCenter'>
-                    <li>Aggressive</li>
-                    <li>Rollerblading</li>
-                    <li>Quads</li>
-                    <li>Brands</li>
+                    <li>AGGRESSIVE</li>
+                    <li>ROLLERBLADING</li>
+                    <li>QUADS</li>
+                    <li>BRANDS</li>
                 </ul>
                 <CartWidget />
             </nav>

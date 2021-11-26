@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <NavBar />
-        <ItemListContainer greeting='Welcome to Domestic Punk Skates 🤟'/>
+        <ItemListContainer greeting='WELCOME TO DOMESTIC PUNK SKATES 🤟'/>
       </header>
     </div>
   );

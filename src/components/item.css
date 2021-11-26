@@ -4,6 +4,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2vh;
+}
+
+.card:hover {
+    border: 1px solid black;
 }
 
 .cardImg {
