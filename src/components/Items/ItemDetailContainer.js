@@ -5,7 +5,7 @@ const getItem = () => {
     return new Promise((resolve, reject) => {
         const object = [
             {
-                id: '1',
+                id: 1,
                 name: 'M12 LO UFS SPASSOV DOMESTIC PUNK',
                 price: '€219.99',
                 stock: 20,
@@ -13,7 +13,7 @@ const getItem = () => {
                 img: 'https://www.roces.com/pub/media/catalog/product/cache/c7f8b3057cd3dca920be537fa7ff27ff/1/0/101277_002.jpg'
             },
             {
-                id: 3,
+                id: 2,
                 name: 'M12 LO TIDES',
                 price: '€219.99',
                 stock: 17,
@@ -21,7 +21,7 @@ const getItem = () => {
                 img: 'https://www.roces.com/pub/media/catalog/product/cache/c7f8b3057cd3dca920be537fa7ff27ff/t/i/tides.jpg' 
             },
             {
-                id: '2',
+                id: 3,
                 name: 'FIFTH ELEMENT UFS GOTO KEMURI GRAY',
                 price: '€279.99',
                 stock: 15,
@@ -92,7 +92,7 @@ export const ItemDetailContainer = () => {
         const obj = getItem()
 
         obj.then(response => {
-            setProduct(response[2])
+            setProduct(response[0])
         })
     }, [])
 

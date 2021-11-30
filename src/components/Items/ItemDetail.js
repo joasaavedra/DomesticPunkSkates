@@ -21,7 +21,7 @@ export const ItemDetail = ({ product }) => {
             <img src={product.img} alt={product.name} className='itemImg'/>
             <div className='itemDetail'>
                 <h1 className='itemName'>{product.brand} {product.name}</h1>
-                <h3>{product.price}</h3>
+                <h3 className='itemPrice'>{product.price}</h3>
                 <p>Only {product.stock} units available</p>
                 <div className='detailButtons'>
                     <div className='quantityButtons'>
@@ -31,6 +31,9 @@ export const ItemDetail = ({ product }) => {
                     </div>
                     <div className='addToCartButtonContainer'>
                         <button className='addToCartBtn'>ADD TO CART</button>
+                    </div>
+                    <div className='backButtonContainer'>
+                        <button className='backButton'>GO BACK</button>
                     </div>
                 </div>
             </div>
