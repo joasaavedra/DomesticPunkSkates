@@ -1,9 +1,7 @@
-import { useState, useEffect } from 'react'
-import { ItemCount } from './ItemCount'
-import { ItemList } from './ItemList'
-import './itemListContainer.css'
+import { useEffect, useState } from "react"
+import { ItemDetail } from "./ItemDetail"
 
-const getItems = () => {
+const getItem = () => {
     return new Promise((resolve, reject) => {
         const object = [
             {
@@ -28,7 +26,18 @@ const getItems = () => {
                 price: '€279.99',
                 stock: 15,
                 brand: 'ROCES',
-                img: 'https://www.roces.com/pub/media/catalog/product/cache/c7f8b3057cd3dca920be537fa7ff27ff/1/0/101279_002_1.jpg'
+                img: 'https://www.roces.com/pub/media/catalog/product/cache/c7f8b3057cd3dca920be537fa7ff27ff/1/0/101279_002_1.jpg',
+                data: [
+                        {Shell: 'High Grade Polyurethane HGPU'},
+                        {Closure: 'Aluminium Memory Buckle, Laces'},
+                        {Liner: 'Anatomically padded with Slo-Memory foam'},
+                        {Fitting: 'Special Aggro grab strap, Special Shock Absorbing Insole'},
+                        {Footbed: 'Roces for street skating'},
+                        {Frame: 'UFS - Glass Fiber Reinforced Nylon'},
+                        {Wheels: '2 wheels 60mm 92A high quality + 2 grind wheels'},
+                        {Bearings: 'ABEC 5'},
+                        {Spacers: 'Aluminium'}
+                ]
             },
             {
                 id: 4,
@@ -75,27 +84,21 @@ const getItems = () => {
     })
 }
 
-export const ItemListContainer = ({greeting}) => {
-    const [listProduct, setListProduct] = useState([])
+
+export const ItemDetailContainer = () => {
+    const [product, setProduct] = useState([])
 
     useEffect(() => {
-        const list = getItems()
+        const obj = getItem()
 
-        list.then(response => {
-            setListProduct(response)
+        obj.then(response => {
+            setProduct(response[2])
         })
     }, [])
 
-
-    const addToCart = (count) => {
-        console.log(`${count} products has been added`)
-    }
-
     return (
-        <div className='itemListContainer'>
-            <h1 className='title'>{greeting}</h1>
-            <ItemList items={listProduct}/>
-            <ItemCount stock='10' initial={1} onAdd={addToCart}/>
-        </div>
+        <section className='itemDetailContainer'>
+            <ItemDetail product={product}/>
+        </section>
     )
-} 
+}

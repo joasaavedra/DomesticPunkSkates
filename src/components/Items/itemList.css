@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(4, 20vw);
     column-gap: 4vw;
+    row-gap: 10vh;
     justify-items: center;
 }
 
