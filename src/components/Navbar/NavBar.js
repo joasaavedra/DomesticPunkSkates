@@ -1,10 +1,8 @@
-import logo from '../logo.png'
-import { CartWidget } from './CartWidget'
+import logo from '../../logo.png'
+import { CartWidget } from '../Cart/CartWidget'
 import { MobileNavigation } from './MobileNavigation'
 import { Navigation } from './Navigation'
 import './navBar.css'
-
-
 
 export const NavBar = () => {
     

@@ -1,4 +1,4 @@
-.itemContainer {
+.itemList {
     display: grid;
     grid-template-columns: repeat(4, 20vw);
     column-gap: 4vw;
@@ -6,7 +6,13 @@
 }
 
 @media (max-width: 992px) {
-    .itemContainer {
+    .itemList {
         grid-template-columns: repeat(2, 40vw);
+    }
+}
+
+@media (max-width: 576px) {
+    .itemList {
+        grid-template-columns: repeat(1, 80vw);
     }
 }

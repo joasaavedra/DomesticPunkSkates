@@ -79,3 +79,28 @@
         text-align: center;
     }
 }
+
+@media (max-width: 576px) {
+    .logo {
+        display: none;
+    }
+
+    .navBarLeft h1 {
+        margin-left: 2vw;
+    }
+
+    .hamburger {
+        right: 17vw;
+    }
+
+    .navBarCenter {
+        height: auto;
+        align-items: flex-start;
+        justify-content: flex-start;
+        text-align-last: start;
+    }
+
+    .navBarCenter li {
+        font-size: 2em;
+    }
+}
