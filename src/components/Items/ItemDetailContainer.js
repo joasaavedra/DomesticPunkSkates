@@ -27,17 +27,6 @@ const getItem = () => {
                 stock: 15,
                 brand: 'ROCES',
                 img: 'https://www.roces.com/pub/media/catalog/product/cache/c7f8b3057cd3dca920be537fa7ff27ff/1/0/101279_002_1.jpg',
-                data: [
-                        {Shell: 'High Grade Polyurethane HGPU'},
-                        {Closure: 'Aluminium Memory Buckle, Laces'},
-                        {Liner: 'Anatomically padded with Slo-Memory foam'},
-                        {Fitting: 'Special Aggro grab strap, Special Shock Absorbing Insole'},
-                        {Footbed: 'Roces for street skating'},
-                        {Frame: 'UFS - Glass Fiber Reinforced Nylon'},
-                        {Wheels: '2 wheels 60mm 92A high quality + 2 grind wheels'},
-                        {Bearings: 'ABEC 5'},
-                        {Spacers: 'Aluminium'}
-                ]
             },
             {
                 id: 4,
