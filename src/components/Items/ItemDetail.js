@@ -1,19 +1,10 @@
-import { useState } from 'react'
+import { ItemCount } from './ItemCount'
 import './itemDetail.css'
 
 export const ItemDetail = ({ product }) => {
-    const [count, setCount] = useState(1)
 
-    const increment = () => {
-        if(count < product.stock){
-            setCount(count + 1)
-        }
-    }
-
-    const decrement = () => {
-        if(count > 0){
-            setCount(count - 1)
-        }
+    const addToCart = (count) => {
+        console.log(`${count} products has been added`)
     }
 
     return (
@@ -23,19 +14,7 @@ export const ItemDetail = ({ product }) => {
                 <h1 className='itemName'>{product.brand} {product.name}</h1>
                 <h3 className='itemPrice'>{product.price}</h3>
                 <p>Only {product.stock} units available</p>
-                <div className='detailButtons'>
-                    <div className='quantityButtons'>
-                        <button onClick={decrement} className='quantityBtn'>-</button>
-                        <p>{count}</p>
-                        <button onClick={increment} className='quantityBtn'>+</button>
-                    </div>
-                    <div className='addToCartButtonContainer'>
-                        <button className='addToCartBtn'>ADD TO CART</button>
-                    </div>
-                    <div className='backButtonContainer'>
-                        <button className='backButton'>GO BACK</button>
-                    </div>
-                </div>
+                <ItemCount initial={1} stock={product.stock} onAdd={addToCart} /> 
             </div>
         </article>
     )

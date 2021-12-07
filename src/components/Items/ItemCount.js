@@ -17,11 +17,7 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
     }
 
     return (
-        <div className='productContainer'>
-            <div className='product'>
-                <img className='productImage' src='https://www.roces.com/pub/media/catalog/product/cache/c7f8b3057cd3dca920be537fa7ff27ff/1/0/101277_002.jpg' alt='Roces M12 LO'/>
-                <p>ROCES M12 LO UFS SPASSOV DOMESTIC PUNK</p>
-            </div>
+        <div className='counterContainer'>
             <div className='counter'>
                 <button className='quantityBtn' onClick={decrement}>-</button>
                 <p>{count}</p>
@@ -29,7 +25,10 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
             </div>
             <div className='addToCartBtnContainer'>
                 <button className='addToCartBtn' onClick={() => onAdd(count)}>ADD TO CART</button>
-            </div>       
+            </div>  
+            <div className='backButtonContainer'>
+                <button className='backButton'>GO BACK</button>
+            </div>     
         </div>
     )
 }

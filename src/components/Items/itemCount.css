@@ -1,16 +1,5 @@
-.productContainer{
+.counterContainer{
     width: 15vw;
-}
-
-.product {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.productImage {
-    width: 100%;
 }
 
 .counter {
@@ -33,13 +22,17 @@
     cursor: pointer;
 }
 
-.addToCartBtnContainer {
+.addToCartBtnContainer, .backButtonContainer {
     height: 5vh;
     border: 2px solid rgb(174, 121, 199);
     border-radius: 5px;
 }
 
-.addToCartBtn {
+.backButtonContainer {
+    margin-top: 1vh;
+}
+
+.addToCartBtn, .backButton {
     width: 100%;
     height: 5vh;
     color: rgb(174, 121, 199);
@@ -50,13 +43,13 @@
     cursor: pointer;
 }
 
-.addToCartBtn:hover, .quantityBtn:hover {
+.addToCartBtn:hover, .quantityBtn:hover, .backButton:hover {
     background-color: rgb(174, 121, 199);
     color: white;
 }
 
 @media (max-width: 992px) {
-    .productContainer {
+    .counterContainer {
         width: 40vw;
     }
 }
