@@ -1,4 +1,4 @@
-import { ItemCount } from './ItemCount'
+import { ItemCount } from '../ItemCount/ItemCount'
 import './itemDetail.css'
 
 export const ItemDetail = ({ product }) => {
@@ -15,7 +15,10 @@ export const ItemDetail = ({ product }) => {
                 <h3 className='itemPrice'>{product.price}</h3>
                 <p>Only {product.stock} units available</p>
                 <ItemCount initial={1} stock={product.stock} onAdd={addToCart} /> 
-            </div>
+                <div className='backButtonContainer'>
+                    <button className='backButton'>GO BACK</button>
+                </div>   
+            </div>  
         </article>
     )
 }
