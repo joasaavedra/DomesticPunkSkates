@@ -1,7 +1,7 @@
 import { Item } from '../Item/Item'
 import './itemList.css'
 
-export const ItemList = ({ items }) => {
+export const ItemList = ({ items = [] }) => {
 
     return (
         <div className='itemList'>
