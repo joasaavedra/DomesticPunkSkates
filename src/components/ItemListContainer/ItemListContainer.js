@@ -3,21 +3,27 @@ import { getProducts } from '../../products'
 import { ItemList } from '../ItemList/ItemList'
 import './itemListContainer.css'
 
-export const ItemListContainer = ({greeting}) => {
+export const ItemListContainer = () => {
     const [listProduct, setListProduct] = useState([])
 
     useEffect(() => {
         const list = getProducts()
 
-        list.then(response => {
-            setListProduct(response)
+        list.then(item => {
+            setListProduct(item)
+        }).catch(err => {
+            console.log(err)
         })
+
+        return (() => {
+            setListProduct([])
+        })
+
     }, [])
 
     return (
         <div className='itemListContainer'>
-            <h1 className='title'>{greeting}</h1>
-            <ItemList items={listProduct}/>
+            <ItemList products={listProduct} />
         </div>
     )
 } 

@@ -1,7 +1,7 @@
 import { ItemCount } from '../ItemCount/ItemCount'
 import './itemDetail.css'
 
-export const ItemDetail = ({ img, name, brand, stock, price }) => {
+export const ItemDetail = ({ product }) => {
 
     const addToCart = (count) => {
         console.log(`${count} products has been added`)
@@ -9,12 +9,12 @@ export const ItemDetail = ({ img, name, brand, stock, price }) => {
 
     return (
         <article className='item'>
-            <img src={img} alt={name} className='itemImg'/>
+            <img src={product?.img} alt={product?.name} className='itemImg'/>
             <div className='itemDetail'>
-                <h1 className='itemName'>{brand} {name}</h1>
-                <h3 className='itemPrice'>{price}</h3>
-                <p>Only {stock} units available</p>
-                <ItemCount initial={1} stock={stock} onAdd={addToCart} /> 
+                <h1 className='itemName'>{product?.brand} {product?.name}</h1>
+                <h3 className='itemPrice'>{product?.price}</h3>
+                <p>Only {product?.stock} units available</p>
+                <ItemCount initial={1} stock={product?.stock} onAdd={addToCart} /> 
                 <div className='backButtonContainer'>
                     <button className='backButton'>GO BACK</button>
                 </div>   
