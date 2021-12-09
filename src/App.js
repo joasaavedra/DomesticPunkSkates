@@ -1,6 +1,6 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { NavBar } from '../src/components/Navbar/NavBar';
-import { ItemDetailContainer } from './components/ItemDetail/ItemDetailContainer';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
 
 function App() {
@@ -10,7 +10,10 @@ function App() {
         <NavBar />
         <Switch>
           <Route exact path='/'>
-            <ItemListContainer greeting='WELCOME TO DOMESTIC PUNK SKATES 🤟'/>
+            <ItemListContainer />
+          </Route>
+          <Route path='/category/:categoryId'>
+            <ItemListContainer />
           </Route>
           <Route path='/detail/:paramId'>
             <ItemDetailContainer />

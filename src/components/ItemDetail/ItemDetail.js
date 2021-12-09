@@ -13,6 +13,7 @@ export const ItemDetail = ({ product }) => {
             <div className='itemDetail'>
                 <h1 className='itemName'>{product?.brand} {product?.name}</h1>
                 <h3 className='itemPrice'>{product?.price}</h3>
+                <p>Style: {product?.type}</p>
                 <p>Only {product?.stock} units available</p>
                 <ItemCount initial={1} stock={product?.stock} onAdd={addToCart} /> 
                 <div className='backButtonContainer'>

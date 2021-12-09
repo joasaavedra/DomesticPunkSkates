@@ -1,4 +1,5 @@
 .itemList {
+    margin: 10vh 0 10vh 0;
     display: grid;
     grid-template-columns: repeat(4, 20vw);
     column-gap: 4vw;
