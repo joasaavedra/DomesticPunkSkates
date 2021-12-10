@@ -4,7 +4,7 @@ import './item.css'
 export const Item = ({ product }) => {
 
     return (
-        <div key={product.id} className='card'>
+        <div key={product.id} className='card' to={`/detail/${product.id}`}>
             <img src={product.img} alt={product.name} className='cardImg'/>
             <h3 className='cardTitle'>{product.brand} {product.name}</h3>
             <p className='cardPrice'>{product.price}</p>

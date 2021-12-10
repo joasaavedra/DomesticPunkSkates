@@ -7,7 +7,6 @@ import './itemDetailContainer.css'
 export const ItemDetailContainer = () => {
     const [product, setProduct] = useState()
     const { paramId } = useParams()
-    console.log(paramId)
 
     useEffect(() => {
         getProductById(paramId).then(item => {

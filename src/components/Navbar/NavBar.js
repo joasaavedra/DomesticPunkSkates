@@ -1,16 +1,17 @@
-import logo from '../../logo.png'
+import { Link } from 'react-router-dom'
 import { CartWidget } from '../Cart/CartWidget'
 import { MobileNavigation } from './MobileNavigation'
 import { Navigation } from './Navigation'
+import logo from '../../logo.png'
 import './navBar.css'
 
 export const NavBar = () => {
     
     return  <nav className='navBar'>
-                <div className='navBarLeft'>
+                <Link className='navBarLeft' to={'/'}>
                     <img className='logo' src={logo} alt="logo"/>
                     <h1>DOMESTIC PUNK SKATES</h1>
-                </div>
+                </Link>
                 <MobileNavigation />
                 <Navigation />
                 <CartWidget />
