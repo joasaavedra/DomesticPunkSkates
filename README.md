@@ -1,3 +1,6 @@
+# Proyecto Domestic Punk Skates
+Este proyecto esta realizado con React en Coderhouse. Es un Ecommerce de patines y esta en ingles porque queria practicar el idioma.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
