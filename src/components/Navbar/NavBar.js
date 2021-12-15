@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { CartWidget } from '../Cart/CartWidget'
+import { CartWidget } from '../CartWidget/CartWidget'
 import { MobileNavigation } from './MobileNavigation'
 import { Navigation } from './Navigation'
 import logo from '../../logo.png'
@@ -14,6 +14,8 @@ export const NavBar = () => {
                 </Link>
                 <MobileNavigation />
                 <Navigation />
-                <CartWidget />
+                <Link to='/cart'>
+                    <CartWidget />
+                </Link>
             </nav>
 }

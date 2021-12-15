@@ -1,7 +1,8 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { NavBar } from '../src/components/Navbar/NavBar';
-import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetailContainer';
+import { Cart } from './components/Cart/Cart'
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
           </Route>
           <Route path='/item/:paramId'>
             <ItemDetailContainer />
+          </Route>
+          <Route path='/cart'>
+            <Cart />
           </Route>
         </Switch>
       </BrowserRouter>
