@@ -1,16 +1,15 @@
 import { useState, useContext } from 'react'
 import { useHistory } from 'react-router-dom'
-import { CartContext } from '../../context/CartContext'
+import CartContext from '../../context/CartContext'
 import { ItemCount } from '../ItemCount/ItemCount'
 import './itemDetail.css'
 
 export const ItemDetail = ({ product }) => {
     const [quantity, setQuantity] = useState()
-
-    const history = useHistory()
-
     const value = useContext(CartContext)
     console.log(value)
+
+    const history = useHistory()
 
     const addToCart = (count) => {
         setQuantity(count)
