@@ -1,4 +1,4 @@
-const products = [
+export const products = [
     {
         id: 1,
         name: 'M12 LO UFS SPASSOV DOMESTIC PUNK',
@@ -180,25 +180,3 @@ const products = [
         img: 'https://media.rollerderbyhouse.eu/CommerceManager/Products/1505/product_1505_5db1ac5997e24_medium.jpg'
     },
 ]
-
-export const getProducts = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(products)
-        }, 1000)
-    })
-}
-
-export const getProductById = (id) => {  
-    return new Promise((resolve, reject) => {
-        const product = products.find(prod => parseInt(prod.id) === parseInt(id))
-        setTimeout(() => resolve(product), 1000)
-    })
-}
-
-export const getProductsByCategory = (type) => {
-    return new Promise((resolve, reject) => {
-        const category = products.filter(prod => prod.type === type)
-        setTimeout(() => resolve(category), 1000)
-    })
-}

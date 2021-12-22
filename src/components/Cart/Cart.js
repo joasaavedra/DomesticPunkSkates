@@ -3,7 +3,7 @@ import CartContext from '../../context/CartContext'
 import './cart.css'
 
 export const Cart = () => {
-    const { cart } = useContext(CartContext)
+    const { cart, quantity } = useContext(CartContext)
     console.log(cart)
 
     return (
@@ -14,7 +14,7 @@ export const Cart = () => {
                         <img className="cartProductImg" src={i?.img} alt={i?.name}/>
                         <div className="cartProductDetails">
                             <p className="productName">{i?.name}</p>
-                            <p>QUANTITY</p>
+                            <p>{quantity}</p>
                             <p className="productPrice">{i?.price} EACH</p>
                         </div>
                     </article>
