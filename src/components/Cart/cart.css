@@ -1,0 +1,22 @@
+.cartContainer {
+    margin: 8vh;
+}
+
+.cartProductContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.cartProductImg {
+    width: 15vw;
+}
+
+.cartProductDetails {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 5vh;
+    font-size: x-large;
+}
