@@ -8,21 +8,20 @@ export const CartContextProvider = ({children}) => {
     const [quantity, setQuantity] = useState('')
 
     const addItem = (item, quantity) => {
-        setItem(item)
-        setCart([...cart, item])
-        setQuantity(quantity)
+            setCart([...cart, {item, quantity}])
+            setQuantity(quantity)
     }
 
     const removeItem = (itemId) => {
-
+        
     }
 
     const clear = () => {
-
+        setCart([])
     }
 
     const isInCart = (itemId) => {
-        cart.some(item.id === itemId)
+        
     }
     
     return (

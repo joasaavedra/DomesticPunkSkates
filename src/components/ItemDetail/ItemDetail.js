@@ -11,7 +11,7 @@ export const ItemDetail = ({ product }) => {
 
     const addToCart = (count) => {
         setQuantity(count)
-        addItem(product, quantity)
+        addItem(product, count)
     }
 
     return (
