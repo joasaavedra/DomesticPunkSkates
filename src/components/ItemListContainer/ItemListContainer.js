@@ -4,6 +4,7 @@ import { collection, getDocs, query, where } from 'firebase/firestore'
 import { db } from '../../services/firebase/firebase'
 import { ItemList } from '../ItemList/ItemList'
 import './itemListContainer.css'
+import { Spinner } from '../Spinner/Spinner'
 
 export const ItemListContainer = () => {
     const [listProduct, setListProduct] = useState([])
@@ -43,7 +44,7 @@ export const ItemListContainer = () => {
 
     if(loading) {
         return (
-            <h1>LOADING..</h1>
+            <Spinner />
         )
     }
 

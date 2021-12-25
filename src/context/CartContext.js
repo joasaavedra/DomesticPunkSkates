@@ -14,9 +14,7 @@ export const CartContextProvider = ({children}) => {
     }
 
     const removeItem = (itemId) => {
-        const auxCart = [...cart]
-        auxCart.filter(p => p.id !== itemId)
-        setCart(auxCart)
+        setCart(cart.filter((p) => p.id !== itemId))
     }
 
     const clear = () => {

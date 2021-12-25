@@ -4,6 +4,7 @@ import { getDoc, doc } from 'firebase/firestore'
 import { db } from '../../services/firebase/firebase'
 import { ItemDetail } from "../ItemDetail/ItemDetail"
 import './itemDetailContainer.css'
+import { Spinner } from "../Spinner/Spinner"
 
 export const ItemDetailContainer = () => {
     const [product, setProduct] = useState()
@@ -28,7 +29,7 @@ export const ItemDetailContainer = () => {
 
     if(loading) {
         return (
-            <h1>LOADING...</h1>
+            <Spinner />
         )
     }
 
