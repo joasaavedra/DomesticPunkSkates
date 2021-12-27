@@ -8,6 +8,7 @@
 }
 
 .spinner {
+    width: 15%;
     margin-top: 20vh;
     animation: spin 1.5s linear infinite;
 }

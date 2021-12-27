@@ -8,10 +8,9 @@
 
 .cartIcon {
     align-self: center;
-    cursor: pointer;
 }
 
-.cartNumber {
+.cartNumber  {
     width: 1.3em;
     height: 1.3em;
     text-align: center;

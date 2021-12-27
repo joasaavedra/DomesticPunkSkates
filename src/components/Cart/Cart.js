@@ -21,15 +21,25 @@ export const Cart = () => {
                                 <p className="productPrice">€{i.price} EACH</p>
                             </div>
                             <div className="removeProductBtnContainer">
-                                <button className="removeProductBtn" onClick={removeItem}>X</button>
+                                <button className="removeProductBtn" onClick={()=> removeItem(i.id)}>X</button>
                             </div>
                         </article>
                     )
                 })}
             </div>
             <div className="cartBtnsContainer">
-                {cart.length >= 1 ? <div className="emptyCartBtnContainer"><button className="emptyCartBtn" onClick={clear}>EMPTY CART</button></div> : <div className="emptyCartMessage"><h1>THERE IS NO ITEMS IN CART</h1><div className="keepShoppingBtnContainer"><button className="keepShoppingBtn" onClick={() => {history.push('/')}}>KEEP SHOPPING</button></div></div>}
-                {cart.length >= 1 && <div className='buyBtnContainer'><button className="buyBtn">BUY</button></div>}
+                {cart.length >= 1 ? <div className="emptyCartBtnContainer">
+                                        <button className="emptyCartBtn" onClick={clear}>EMPTY CART</button>
+                                    </div> : 
+                                    <div className="emptyCartMessage">
+                                        <h1>THERE IS NO ITEMS IN CART</h1>
+                                        <div className="keepShoppingBtnContainer">
+                                            <button className="keepShoppingBtn" onClick={() => {history.push('/')}}>KEEP SHOPPING</button>
+                                        </div>
+                                    </div>}
+                {cart.length >= 1 && <div className='buyBtnContainer'>
+                                        <button className="buyBtn">BUY</button>
+                                    </div>}
             </div>
         </div>
     )
