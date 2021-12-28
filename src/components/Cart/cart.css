@@ -1,5 +1,5 @@
 .cartContainer {
-    margin: 8vh;
+    margin: 8vh 8vh 0vh 8vh;
 }
 
 .cartProductContainer {
@@ -78,4 +78,16 @@
     align-items: center;
     width: 100%;
     justify-content: center;
+}
+
+.totalPriceContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.totalPrice {
+    margin-right: 8vw;
+    font-size: x-large;
 }

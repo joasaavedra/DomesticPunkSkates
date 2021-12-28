@@ -6,10 +6,14 @@ import './cartWidget.css'
 
 export const CartWidget = () => {
 
-        const { total } = useContext(CartContext)
+        const { total, cart } = useContext(CartContext)
 
-    return <div className='cartWidget'>
-                <FontAwesomeIcon icon={faShoppingCart} size='lg' className='cartIcon'/>
-                <p className='cartNumber'>{total()}</p>
-        </div>
+        return (
+                <>
+                        {cart.length >= 1 && <div className='cartWidget'>
+                                <FontAwesomeIcon icon={faShoppingCart} size='lg' className='cartIcon' />
+                                <p className='cartNumber'>{total()}</p>
+                        </div>}
+                </>
+        )
 }
