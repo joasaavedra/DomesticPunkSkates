@@ -1,7 +1,7 @@
 import { useState, useContext } from "react"
 import { useHistory } from "react-router-dom"
 import { db } from '../../services/firebase/firebase'
-import { addDoc, collection } from 'firebase/firestore'
+import { addDoc, collection, Timestamp, doc, writeBatch, getDoc } from 'firebase/firestore'
 import CartContext from '../../context/CartContext'
 import './cart.css'
 
@@ -15,6 +15,7 @@ export const Cart = () => {
         phone: '',
         address: ''
     })
+    const [orderId, setOrderId] = useState('')
 
     const newOrder = () => {
         let contact = {
@@ -34,12 +35,35 @@ export const Cart = () => {
             total: totalPrice(),
             phone: contact.phone,
             address: contact.address,
-            comment: contact.comment
+            comment: contact.comment,
+            date: Timestamp.fromDate(new Date())
         }
 
-        addDoc(collection(db, 'orders'), objOrder).then(({ id }) => {
-            console.log(id);
+        const batch = writeBatch(db)
+        const outOfStock = []
+
+        cart.forEach((prod) => {
+            getDoc(doc(db, 'items', prod.id)).then((documentSnapshot) => {
+                if(documentSnapshot.data().stock >= prod.quantity) {
+                    batch.update(doc(db, 'items', documentSnapshot.id), {
+                        stock: documentSnapshot.data().stock - prod.quantity
+                    })
+                } else {
+                    outOfStock.push({ id: documentSnapshot.id, ...documentSnapshot.data() })
+                }
+            })
         })
+
+        if(outOfStock.length === 0) {
+            addDoc(collection(db, 'orders'), objOrder).then(({ id }) => {
+                batch.commit().then(() => {
+                    setOrderId(id)
+                    console.log(orderId)
+                })
+            }).catch((err) => {
+                console.log(`Error: ${err}`)
+            })
+        }
     }
 
     return (
