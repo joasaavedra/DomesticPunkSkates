@@ -1,15 +1,49 @@
-import { useContext } from "react"
+import { useState, useContext } from "react"
 import { useHistory } from "react-router-dom"
+import { db } from '../../services/firebase/firebase'
+import { addDoc, collection } from 'firebase/firestore'
 import CartContext from '../../context/CartContext'
 import './cart.css'
 
 export const Cart = () => {
-    const { cart, clear, removeItem, totalPrice } = useContext(CartContext)
-
     const history = useHistory()
 
+    const { cart, clear, removeItem, totalPrice } = useContext(CartContext)
+
+    const [contact, setContact] = useState({
+        name: '',
+        phone: '',
+        address: ''
+    })
+
+    const newOrder = () => {
+        let contact = {
+            name: document.getElementById('name').value,
+            phone: document.getElementById('phone').value,
+            address: document.getElementById('address').value,
+            comment: document.getElementById('comment').value
+        }
+        setContact(contact)
+        createNewOrder()
+    }
+
+    const createNewOrder = () => {
+        const objOrder = {
+            buyer: contact.name,
+            items: cart,
+            total: totalPrice(),
+            phone: contact.phone,
+            address: contact.address,
+            comment: contact.comment
+        }
+
+        addDoc(collection(db, 'orders'), objOrder).then(({ id }) => {
+            console.log(id);
+        })
+    }
+
     return (
-        <div>
+        <div className="orderContainer">
             <div className="cartContainer">
                 {cart.map((i) => {
                     return (
@@ -30,19 +64,34 @@ export const Cart = () => {
             <div className="totalPriceContainer">
             {cart.length >= 1 && <p className="totalPrice">TOTAL €{totalPrice()}</p>}
             </div>
+            {cart.length >= 1 &&<div className="formCotainer">
+                <h2>PLEASE COMPLETE THE FOLLOWING FORM TO FINISH THE ORDER</h2>
+                <form className="form">
+                    <label>NAME:</label><br/>
+                    <input type='text' id="name"></input><br/>
+                    <label>PHONE:</label><br/>
+                    <input type='number' id="phone"></input><br/>
+                    <label>ADDRESS:</label><br/>
+                    <input type='text' id="address"></input><br/>
+                    <label>ADDITIONAL COMMENT:</label><br/>
+                    <input type='text' id='comment'></input>
+                </form>
+            </div>}
             <div className="cartBtnsContainer">
-                {cart.length >= 1 ? <div className="emptyCartBtnContainer">
-                    <button className="emptyCartBtn" onClick={clear}>EMPTY CART</button>
-                </div> :
-                    <div className="emptyCartMessage">
-                        <h1>THERE IS NO ITEMS IN CART</h1>
-                        <div className="keepShoppingBtnContainer">
-                            <button className="keepShoppingBtn" onClick={() => { history.push('/') }}>KEEP SHOPPING</button>
-                        </div>
-                    </div>}
-                {cart.length >= 1 && <div className='buyBtnContainer'>
-                    <button className="buyBtn">BUY</button>
-                </div>}
+                {cart.length >= 1 ? <>
+                                        <div className="emptyCartBtnContainer">
+                                            <button className="emptyCartBtn" onClick={clear}>EMPTY CART</button>
+                                        </div>
+                                        <div className='buyBtnContainer'>
+                                            <button className="buyBtn" onClick={newOrder}>BUY</button>
+                                        </div> 
+                                    </> :
+                                    <div className="emptyCartMessage">
+                                        <h1>THERE IS NO ITEMS IN CART</h1>
+                                        <div className="keepShoppingBtnContainer">
+                                            <button className="keepShoppingBtn" onClick={() => { history.push('/') }}>KEEP SHOPPING</button>
+                                        </div>
+                                    </div>}
             </div>
         </div>
     )

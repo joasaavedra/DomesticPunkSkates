@@ -6,7 +6,14 @@ export const CartContextProvider = ({children}) => {
     const [cart, setCart] = useState([])
 
     const addItem = (item, quantity) => {
-        setCart([...cart, { ...item, quantity }])
+        let flag = isInCart(item.id)
+        if(flag) {
+            let repeated = cart.find(p => p.id === item.id)
+            repeated.quantity += quantity
+            setCart([...cart])
+        } else {
+            setCart([...cart, { ...item, quantity }])
+        }
     }
 
     const removeItem = (itemId) => {
@@ -18,7 +25,7 @@ export const CartContextProvider = ({children}) => {
     }
 
     const isInCart = (itemId) => {
-        
+        return cart.some(p => p.id === itemId)
     }
 
     const total = () => {
@@ -30,7 +37,7 @@ export const CartContextProvider = ({children}) => {
     }
     
     return (
-        <Context.Provider value={{ cart, addItem, removeItem, clear, isInCart, total, totalPrice }}>
+        <Context.Provider value={{ cart, addItem, removeItem, clear, total, totalPrice }}>
             {children}
         </Context.Provider>
     )

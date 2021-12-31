@@ -27,6 +27,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    margin-top: 4vh;
+    margin-bottom: 10vh;
 }
 
 .emptyCartBtnContainer, .buyBtnContainer {
@@ -81,13 +83,28 @@
 }
 
 .totalPriceContainer {
-    width: 100%;
+    width: 80%;
+    margin-left: 10%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    border-bottom: 2px solid rgb(174, 121, 199);
 }
 
 .totalPrice {
-    margin-right: 8vw;
     font-size: x-large;
+}
+
+.formCotainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form input {
+    margin-bottom: 2vh;
+    height: 3vh;
+    width: 40vw;
 }
