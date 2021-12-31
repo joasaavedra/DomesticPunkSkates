@@ -43,7 +43,7 @@ export const Cart = () => {
         const outOfStock = []
 
         cart.forEach((prod) => {
-            getDoc(doc(db, 'items', prod.id)).then((documentSnapshot) => {
+            getDoc(doc(db, 'products', prod.id)).then((documentSnapshot) => {
                 if(documentSnapshot.data().stock >= prod.quantity) {
                     batch.update(doc(db, 'items', documentSnapshot.id), {
                         stock: documentSnapshot.data().stock - prod.quantity
