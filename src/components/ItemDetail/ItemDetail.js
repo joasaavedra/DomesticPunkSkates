@@ -22,7 +22,7 @@ export const ItemDetail = ({ product }) => {
                 <h3 className='itemPrice'>€{product?.price}</h3>
                 <p>Style: {product?.type}</p>
                 <p>Only {product?.stock} units available</p>
-                {quantity > 0 ? <div className='goToCartButtonContainer'><button className='goToCartButton' to='/cart' onClick={() => {history.push('/cart')}}>GO TO CART</button></div> : <ItemCount initial={1} stock={product?.stock} onAdd={addToCart} />}
+                {quantity > 0 ? <div className='goToCartButtonContainer'><button className='goToCartButton' to='/cart' onClick={() => {history.push('/cart')}}>GO TO CART</button></div> : <ItemCount initial={product?.stock === 0 ? 0 : 1} stock={product?.stock} onAdd={addToCart} />}
                 <div className='backButtonContainer'>
                     <button className='backButton'>GO BACK</button>
                 </div>   

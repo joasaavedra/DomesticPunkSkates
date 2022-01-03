@@ -25,7 +25,6 @@
 .addToCartBtnContainer {
     width: 15vw;
     height: 5vh;
-    border: 2px solid rgb(174, 121, 199);
     border-radius: 5px;
 }
 
@@ -35,7 +34,8 @@
     color: rgb(174, 121, 199);
     font-size: medium;
     font-weight: bold;
-    border: none;
+    border: 2px solid rgb(174, 121, 199);
+    border-radius: 5px;
     background: none;
     cursor: pointer;
 }
@@ -49,4 +49,29 @@
     .counterContainer {
         width: 40vw;
     }
+}
+
+.outOfStockQuantityBtn {
+    width: 2vw;
+    height: 5vh;
+    background-color: rgb(213, 134, 250);
+    font-size: medium;
+    font-weight: bold;
+    color: white;
+    cursor: not-allowed;
+    border: 2px solid rgb(213, 134, 250);
+    border-radius: 5px;
+}
+
+.outOfStockAddToCartBtn {
+    width: 100%;
+    height: 5vh;
+    color: white;
+    font-size: medium;
+    font-weight: bold;
+    border: none;
+    background-color: rgb(213, 134, 250);
+    border: 2px solid rgb(213, 134, 250);
+    border-radius: 5px;
+    cursor: not-allowed;
 }
