@@ -20,13 +20,17 @@
     font-size: 1.5em;
 }
 
-.backButtonContainer {
+.backButtonContainer, .goToCartButtonContainer {
     width: 15vw;
     height: 5vh;
     border-radius: 5px;
 }
 
-.backButton {
+.backButtonContainer {
+    padding-top: 1.5vh;
+}
+
+.backButton, .goToCartButton {
     width: 100%;
     height: 5vh;
     color: rgb(174, 121, 199);
@@ -39,7 +43,7 @@
     margin-top: 1.5vh;
 }
 
-.backButton:hover {
+.backButton:hover, .goToCartButton:hover {
     background-color: rgb(174, 121, 199);
     color: white;
 }

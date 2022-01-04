@@ -45,12 +45,12 @@ export const Cart = () => {
         cart.forEach((prod) => {
             getDoc(doc(db, 'products', prod.id)).then((documentSnapshot) => {
                 if(documentSnapshot.data().stock >= prod.quantity) {
-                    batch.update(doc(db, 'items', documentSnapshot.id), {
+                    batch.update(doc(db, 'products', documentSnapshot.id), {
                         stock: documentSnapshot.data().stock - prod.quantity
                     })
                 } else {
                     outOfStock.push({ id: documentSnapshot.id, ...documentSnapshot.data() })
-                }
+                } 
             })
         })
 
@@ -59,7 +59,7 @@ export const Cart = () => {
                 batch.commit().then(() => {
                     setOrderId(id)
                     console.log(orderId)
-                })
+                }) 
             }).catch((err) => {
                 console.log(`Error: ${err}`)
             })
