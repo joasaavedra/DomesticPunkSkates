@@ -13,7 +13,8 @@ export const Cart = () => {
     const [contact, setContact] = useState({
         name: '',
         phone: '',
-        address: ''
+        address: '',
+        comment: ''
     })
     const [orderId, setOrderId] = useState('')
 
