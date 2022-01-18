@@ -56,6 +56,17 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
+### Add Products
+
+To start seeing the products in the list you have to add them on firestore in a collection named 'products'. Each product has to be an object with: 
+1. id: (string)
+2. brand: (string)
+3. img: (string)
+4. name: (string)
+5. price: (number)
+6. stock: (number)
+7. type: (string)
+
 ### Code Splitting
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
