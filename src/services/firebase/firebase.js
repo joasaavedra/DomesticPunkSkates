@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app'
-import { getFirestore, collection, getDocs, query, where } from 'firebase/firestore'
+import { getFirestore, collection, getDocs, query, where, getDoc, doc } from 'firebase/firestore'
 
 const firebaseConfig = {
     apiKey: process.env.REACT_APP_apiKey,
@@ -26,6 +26,18 @@ const firebaseConfig = {
           return { id: doc.id, ...doc.data()}
         })
         resolve(products)
+      }).catch(error => {
+        reject('Error: ', error)
+      })
+    })
+  }
+
+  export const getProduct = (data, collection, itemId) => {
+
+    return new Promise ((resolve, reject) => {
+      getDoc(doc(data, collection, itemId)).then((querySnapshot) => {
+        const product = { id: querySnapshot.id, ...querySnapshot.data() }
+        resolve(product)
       }).catch(error => {
         reject('Error: ', error)
       })
