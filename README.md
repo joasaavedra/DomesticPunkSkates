@@ -1,13 +1,21 @@
-# Proyecto Domestic Punk Skates
-Este proyecto esta realizado con React en Coderhouse. Es un Ecommerce de patines y esta en ingles porque queria practicar el idioma.
+# Domestic Punk Skates Project
+This project was created with React in CoderHouse. It is an Ecommerce of rollers called Domestic Punk Skates and it is in English because I wanted to practice the language.
 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# First of all 
+
+you have to config a .env file with the firebase credentials. You have an example in .env.example file.
+
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm install`
+
+You have to run this script to install all the dependencies you need.
 
 ### `npm start`
 
