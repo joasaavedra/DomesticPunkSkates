@@ -7,9 +7,7 @@ export const NavLinks = ({ isMobile, closeMobileMenu }) => {
         <ul className='navBarCenter'>
             <li onClick={() => isMobile && closeMobileMenu()}><Link to={`/category/AGGRESSIVE`}>AGGRESSIVE</Link></li>
             <li onClick={() => isMobile && closeMobileMenu()}><Link to={`/category/ROLLERBLADING`}>ROLLERBLADING</Link></li>
-            <li onClick={() => isMobile && closeMobileMenu()}><Link to={`/category/QUAD`}>QUADS</Link></li>
-            <li onClick={() => isMobile && closeMobileMenu()}>BRANDS</li>
-            
+            <li onClick={() => isMobile && closeMobileMenu()}><Link to={`/category/QUAD`}>QUADS</Link></li>       
     </ul>
     )
 }

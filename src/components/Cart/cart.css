@@ -108,3 +108,16 @@
     height: 3vh;
     width: 40vw;
 }
+
+.finishOrderContainer {
+    width: 100vw;
+    height: 100vh;
+    text-align: -webkit-center;
+}
+
+.finishOrder {
+    width: 80vw;
+    margin-top: 10vh;
+    font-size:x-large;
+    text-align: center;
+}

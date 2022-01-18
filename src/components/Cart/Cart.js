@@ -17,6 +17,7 @@ export const Cart = () => {
         comment: ''
     })
     const [orderId, setOrderId] = useState('')
+    const [finishOrder, setFinishOrder] = useState(false)
 
     const newOrder = () => {
         let contact = {
@@ -27,6 +28,8 @@ export const Cart = () => {
         }
         setContact(contact)
         createNewOrder()
+        setFinishOrder(!finishOrder)
+        clear()
     }
 
     const createNewOrder = () => {
@@ -59,12 +62,21 @@ export const Cart = () => {
             addDoc(collection(db, 'orders'), objOrder).then(({ id }) => {
                 batch.commit().then(() => {
                     setOrderId(id)
-                    console.log(orderId)
                 }) 
             }).catch((err) => {
                 console.log(`Error: ${err}`)
             })
         }
+    }
+
+    if(finishOrder) {
+        return (
+            <div className="finishOrderContainer">
+                <div className="finishOrder">
+                    <h3>Thank you for your purchase {contact.name}, one of our operators will contact you to organize the shipment. Your order code is: "{orderId}"</h3>
+                </div>
+            </div>
+        )
     }
 
     return (
