@@ -1,4 +1,5 @@
 # Domestic Punk Skates Project
+
 This project was created with React in CoderHouse. It is an Ecommerce of rollers called Domestic Punk Skates and it is in English because I wanted to practice the language.
 
 # Getting Started with Create React App
@@ -7,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # First of all 
 
-You have to config a .env file with the firebase credentials. You have an example in .env.example file.
+You have to config an .env file with the firebase credentials. You have an example in .env.example file.
 
 ## Available Scripts
 
