@@ -82,4 +82,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Contact me if you need any help 😋
 
-Email: [mailto](mailto:joasaavedra46@gmail.com)
+Email: [joasaavedra46@gmail.com](mailto:joasaavedra46@gmail.com)
