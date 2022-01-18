@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # First of all 
 
-you have to config a .env file with the firebase credentials. You have an example in .env.example file.
+You have to config a .env file with the firebase credentials. You have an example in .env.example file.
 
 ## Available Scripts
 
@@ -79,3 +79,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Contact me if you need any help 😋
+
+Email: [mailto](joasaavedra46@gmail.com)
