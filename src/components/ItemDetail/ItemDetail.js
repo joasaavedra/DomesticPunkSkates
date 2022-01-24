@@ -24,7 +24,7 @@ export const ItemDetail = ({ product }) => {
                 <p>Only {product?.stock} units available</p>
                 {quantity > 0 ? <div className='goToCartButtonContainer'><button className='goToCartButton' to='/cart' onClick={() => {history.push('/cart')}}>GO TO CART</button></div> : <ItemCount initial={product?.stock === 0 ? 0 : 1} stock={product?.stock} onAdd={addToCart} />}
                 <div className='backButtonContainer'>
-                    <button className='backButton'>GO BACK</button>
+                    <button className='backButton' onClick={() => history.push('/')} >KEEP SHOPPING</button>
                 </div>   
             </div>  
         </article>

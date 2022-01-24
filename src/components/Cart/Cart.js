@@ -20,13 +20,13 @@ export const Cart = () => {
     const [finishOrder, setFinishOrder] = useState(false)
 
     const newOrder = () => {
-        let contact = {
+        let contactData = {
             name: document.getElementById('name').value,
             phone: document.getElementById('phone').value,
             address: document.getElementById('address').value,
             comment: document.getElementById('comment').value
         }
-        setContact(contact)
+        setContact(contactData)
         createNewOrder()
         setFinishOrder(!finishOrder)
         clear()
@@ -73,7 +73,8 @@ export const Cart = () => {
         return (
             <div className="finishOrderContainer">
                 <div className="finishOrder">
-                    <h3>Thank you for your purchase {contact.name}, one of our operators will contact you to organize the shipment. Your order code is: "{orderId}"</h3>
+                    <h3>Thank you for your purchase {contact.name}!! One of our operators will contact you to organize the shipment. Your order code is: "{orderId}"</h3>
+                    
                 </div>
             </div>
         )
@@ -124,7 +125,7 @@ export const Cart = () => {
                                         </div> 
                                     </> :
                                     <div className="emptyCartMessage">
-                                        <h1>THERE IS NO ITEMS IN CART</h1>
+                                        <h1>THE CART IS EMPTY</h1>
                                         <div className="keepShoppingBtnContainer">
                                             <button className="keepShoppingBtn" onClick={() => { history.push('/') }}>KEEP SHOPPING</button>
                                         </div>
